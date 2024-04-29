@@ -18,143 +18,129 @@
       <header>
         <div class="header-content">
           <h1>Notifications</h1>
-          <span aria-label="Number of notifications">3</span>
+          <span title="Number of notifications">3</span>
         </div>
-        <button type="button" aria-label="Mark all notifications as read" onclick="readAll()">Mark all as read</button>
+        <button type="button" onclick="readAll()">Mark all as read</button>
       </header>
 
       <main>
-        <section class="notification-list">
+        <div class="notification-list">
           <ul>
-            <li>
-              <article class="unread">
-                <img src="./public/avatar/avatar-mark-webber.webp" alt="Mark Webber" />
+            <li title="notification message" class="unread">
+              <img src="./public/avatar/avatar-mark-webber.webp" alt="Mark Webber" />
 
-                <div class="notification-info">
-                  <p class="notification-title">
-                    <strong class="username">
-                      <a href="#mark_webber_profile">Mark Webber</a>
-                    </strong>
-                    reacted to your recent post
-                    <strong class="page">
-                      <a href="#first_tournament_page" class="">My first tournament today!</a>
-                    </strong>
-                  </p>
-                  <p class="notification-time"><time>1m ago</time></p>
-                </div>
-              </article>
+              <div class="notification-info">
+                <p class="notification-title">
+                  <strong class="username">
+                    <a href="#mark_webber_profile">Mark Webber</a>
+                  </strong>
+                  reacted to your recent post
+                  <strong class="page">
+                    <a href="#first_tournament_page" class="">My first tournament today!</a>
+                  </strong>
+                </p>
+                <p class="notification-time">1m ago</p>
+              </div>
             </li>
 
-            <li>
-              <article class="unread">
-                <img src="./public/avatar/avatar-angela-gray.webp" alt="Angela Gray" />
+            <li title="notification message" class="unread">
+              <img src="./public/avatar/avatar-angela-gray.webp" alt="Angela Gray" />
 
-                <div class="notification-info">
-                  <p class="notification-title">
-                    <strong class="username">
-                      <a href="#angela_gray_profile">Angela Gray</a>
-                    </strong>
-                    followed you
-                  </p>
-                  <p class="notification-time"><time>5m ago</time></p>
-                </div>
-              </article>
+              <div class="notification-info">
+                <p class="notification-title">
+                  <strong class="username">
+                    <a href="#angela_gray_profile">Angela Gray</a>
+                  </strong>
+                  followed you
+                </p>
+                <p class="notification-time">5m ago</p>
+              </div>
             </li>
 
-            <li>
-              <article class="unread">
-                <img src="./public/avatar/avatar-jacob-thompson.webp" alt="Jacob Thompson" />
+            <li title="notification message" class="unread">
+              <img src="./public/avatar/avatar-jacob-thompson.webp" alt="Jacob Thompson" />
 
-                <div class="notification-info">
-                  <p class="notification-title">
-                    <strong class="username">
-                      <a href="#jacob_thompson_profile">Jacob Thompson</a>
-                    </strong>
-                    has joined your group
-                    <strong class="community">
-                      <a href="#chess_club_community">Chess Club</a>
-                    </strong>
-                  </p>
-                  <p class="notification-time"><time>1 day ago</time></p>
-                </div>
-              </article>
+              <div class="notification-info">
+                <p class="notification-title">
+                  <strong class="username">
+                    <a href="#jacob_thompson_profile">Jacob Thompson</a>
+                  </strong>
+                  has joined your group
+                  <strong class="community">
+                    <a href="#chess_club_community">Chess Club</a>
+                  </strong>
+                </p>
+                <p class="notification-time">1 day ago</p>
+              </div>
             </li>
 
-            <li>
-              <article>
-                <img src="./public/avatar/avatar-rizky-hasanuddin.webp" alt="Rizky Hasanuddin" />
+            <li title="notification message">
+              <img src="./public/avatar/avatar-rizky-hasanuddin.webp" alt="Rizky Hasanuddin" />
 
-                <div class="notification-info">
-                  <p class="notification-title">
-                    <strong class="username">
-                      <a href="#rizky_hasanuddin_profile">Rizky Hasanuddin</a>
-                    </strong>
-                    sent you a private message
-                  </p>
-                  <p class="notification-time"><time>5 days ago</time></p>
+              <div class="notification-info">
+                <p class="notification-title">
+                  <strong class="username">
+                    <a href="#rizky_hasanuddin_profile">Rizky Hasanuddin</a>
+                  </strong>
+                  sent you a private message
+                </p>
+                <p class="notification-time">5 days ago</p>
 
-                  <p class="notification-desc">Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.</p>
-                </div>
-              </article>
+                <p class="notification-desc">Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.</p>
+              </div>
             </li>
 
-            <li>
-              <article>
-                <img src="./public/avatar/avatar-kimberly-smith.webp" alt="Kimberly Smith" />
+            <li title="notification message">
+              <img src="./public/avatar/avatar-kimberly-smith.webp" alt="Kimberly Smith" />
 
-                <div class="notification-info">
-                  <p class="notification-title">
-                    <strong class="username">
-                      <a href="#kumberly_smith_profile">Kimberly Smith</a>
-                    </strong>
-                    commented on your picture
-                  </p>
-                  <p class="notification-time"><time>1 week ago</time></p>
-                </div>
+              <div class="notification-info">
+                <p class="notification-title">
+                  <strong class="username">
+                    <a href="#kumberly_smith_profile">Kimberly Smith</a>
+                  </strong>
+                  commented on your picture
+                </p>
+                <p class="notification-time">1 week ago</p>
+              </div>
 
-                <img src="./public/image-chess.webp" alt="Kimberly playing chess" />
-              </article>
+              <img src="./public/image-chess.webp" alt="Kimberly playing chess" />
             </li>
 
-            <li>
-              <article>
-                <img src="./public/avatar/avatar-nathan-peterson.webp" alt="Nathan Peterson" />
+            <li title="notification message">
+              <img src="./public/avatar/avatar-nathan-peterson.webp" alt="Nathan Peterson" />
 
-                <div class="notification-info">
-                  <p class="notification-title">
-                    <strong class="username">
-                      <a href="#nathan_peterson_profile">Nathan Peterson</a>
-                    </strong>
-                    reacted to your recent post
-                    <strong class="page">
-                      <a href="#game_strategies_page">5 end-game strategies to increase your win rate</a>
-                    </strong>
-                  </p>
-                  <p class="notification-time"><time>2 weeks ago</time></p>
-                </div>
-              </article>
+              <div class="notification-info">
+                <p class="notification-title">
+                  <strong class="username">
+                    <a href="#nathan_peterson_profile">Nathan Peterson</a>
+                  </strong>
+                  reacted to your recent post
+                  <strong class="page">
+                    <a href="#game_strategies_page">5 end-game strategies to increase your win rate</a>
+                  </strong>
+                </p>
+                <p class="notification-time">2 weeks ago</p>
+              </div>
             </li>
 
-            <li>
-              <article>
-                <img src="./public/avatar/avatar-anna-kim.webp" alt="Anna Kim" />
+            <li title="notification message">
+              <img src="./public/avatar/avatar-anna-kim.webp" alt="Anna Kim" />
 
-                <div class="notification-info">
-                  <p class="notification-title">
-                    <strong class="username">
-                      <a href="#anna_kim_profile">Anna Kim</a>
-                    </strong>
-                    left the group
-                    <strong class="community">
-                      <a href="#chess_club_community">Chess Club</a>
-                    </strong>
-                  </p>
-                  <p class="notification-time"><time>2 weeks ago</time></p>
-                </div>
-              </article>
+              <div class="notification-info">
+                <p class="notification-title">
+                  <strong class="username">
+                    <a href="#anna_kim_profile">Anna Kim</a>
+                  </strong>
+                  left the group
+                  <strong class="community">
+                    <a href="#chess_club_community">Chess Club</a>
+                  </strong>
+                </p>
+                <p class="notification-time">2 weeks ago</p>
+              </div>
             </li>
           </ul>
-        </section>
+        </div>
       </main>
     </div>
 
@@ -172,12 +158,12 @@
           if (count === 0) {
             clearInterval(interval);
           } else {
-            const unreadArticle = document.querySelector("article.unread");
+            const unreadMessage = document.querySelector(".notification-list li.unread");
 
-            if (unreadArticle) {
-              unreadArticle.classList.remove("unread");
+            if (unreadMessage) {
+              unreadMessage.classList.remove("unread");
             }
-            
+
             count--;
             unreadCount.textContent = count;
           }

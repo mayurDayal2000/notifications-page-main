@@ -81,7 +81,7 @@ main {
   list-style: none;
 }
 
-.notification-list article {
+.notification-list li {
   border-radius: 0.5rem;
   padding: 1rem;
 
@@ -99,18 +99,18 @@ main {
   margin-bottom: 0.75rem;
 }
 
-.notification-list article img {
+.notification-list li img {
   width: 2.5rem;
   height: 2.5rem;
   border: 1px solid rgba(0, 0, 0, 0.4);
   border-radius: 0.5rem;
 }
 
-.notification-list article img:first-child {
+.notification-list li img:first-child {
   border-radius: 50%;
 }
 
-.notification-list article img:last-child {
+.notification-list li img:last-child {
   cursor: pointer;
   margin-left: auto;
 }
@@ -221,7 +221,7 @@ footer strong {
     font-size: 1rem;
   }
 
-  .notification-list article img {
+  .notification-list li img {
     width: 2.75rem;
     height: 2.75rem;
   }
