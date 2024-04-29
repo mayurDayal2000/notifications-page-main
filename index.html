@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./public/favicon-32x32.png" type="image/png" />
+    <title>Frontend Mentor | Notifications page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-content">
+          <h1>Notifications</h1>
+          <span aria-label="Number of notifications">3</span>
+        </div>
+        <button type="button" aria-label="Mark all notifications as read" onclick="readAll()">Mark all as read</button>
+      </header>
+
+      <main>
+        <section class="notification-list">
+          <ul>
+            <li>
+              <article class="unread">
+                <img src="./public/avatar/avatar-mark-webber.webp" alt="Mark Webber" />
+
+                <div class="notification-info">
+                  <p class="notification-title">
+                    <strong class="username">
+                      <a href="#mark_webber_profile">Mark Webber</a>
+                    </strong>
+                    reacted to your recent post
+                    <strong class="page">
+                      <a href="#first_tournament_page" class="">My first tournament today!</a>
+                    </strong>
+                  </p>
+                  <p class="notification-time"><time>1m ago</time></p>
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article class="unread">
+                <img src="./public/avatar/avatar-angela-gray.webp" alt="Angela Gray" />
+
+                <div class="notification-info">
+                  <p class="notification-title">
+                    <strong class="username">
+                      <a href="#angela_gray_profile">Angela Gray</a>
+                    </strong>
+                    followed you
+                  </p>
+                  <p class="notification-time"><time>5m ago</time></p>
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article class="unread">
+                <img src="./public/avatar/avatar-jacob-thompson.webp" alt="Jacob Thompson" />
+
+                <div class="notification-info">
+                  <p class="notification-title">
+                    <strong class="username">
+                      <a href="#jacob_thompson_profile">Jacob Thompson</a>
+                    </strong>
+                    has joined your group
+                    <strong class="community">
+                      <a href="#chess_club_community">Chess Club</a>
+                    </strong>
+                  </p>
+                  <p class="notification-time"><time>1 day ago</time></p>
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article>
+                <img src="./public/avatar/avatar-rizky-hasanuddin.webp" alt="Rizky Hasanuddin" />
+
+                <div class="notification-info">
+                  <p class="notification-title">
+                    <strong class="username">
+                      <a href="#rizky_hasanuddin_profile">Rizky Hasanuddin</a>
+                    </strong>
+                    sent you a private message
+                  </p>
+                  <p class="notification-time"><time>5 days ago</time></p>
+
+                  <p class="notification-desc">Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.</p>
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article>
+                <img src="./public/avatar/avatar-kimberly-smith.webp" alt="Kimberly Smith" />
+
+                <div class="notification-info">
+                  <p class="notification-title">
+                    <strong class="username">
+                      <a href="#kumberly_smith_profile">Kimberly Smith</a>
+                    </strong>
+                    commented on your picture
+                  </p>
+                  <p class="notification-time"><time>1 week ago</time></p>
+                </div>
+
+                <img src="./public/image-chess.webp" alt="Kimberly playing chess" />
+              </article>
+            </li>
+
+            <li>
+              <article>
+                <img src="./public/avatar/avatar-nathan-peterson.webp" alt="Nathan Peterson" />
+
+                <div class="notification-info">
+                  <p class="notification-title">
+                    <strong class="username">
+                      <a href="#nathan_peterson_profile">Nathan Peterson</a>
+                    </strong>
+                    reacted to your recent post
+                    <strong class="page">
+                      <a href="#game_strategies_page">5 end-game strategies to increase your win rate</a>
+                    </strong>
+                  </p>
+                  <p class="notification-time"><time>2 weeks ago</time></p>
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article>
+                <img src="./public/avatar/avatar-anna-kim.webp" alt="Anna Kim" />
+
+                <div class="notification-info">
+                  <p class="notification-title">
+                    <strong class="username">
+                      <a href="#anna_kim_profile">Anna Kim</a>
+                    </strong>
+                    left the group
+                    <strong class="community">
+                      <a href="#chess_club_community">Chess Club</a>
+                    </strong>
+                  </p>
+                  <p class="notification-time"><time>2 weeks ago</time></p>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <strong>Mayur Dayal</strong>.</p>
+    </footer>
+
+    <script>
+      const unreadCount = document.querySelector(".header-content span");
+
+      function readAll() {
+        let count = parseInt(unreadCount.textContent);
+
+        const interval = setInterval(() => {
+          if (count === 0) {
+            clearInterval(interval);
+          } else {
+            const unreadArticle = document.querySelector("article.unread");
+
+            if (unreadArticle) {
+              unreadArticle.classList.remove("unread");
+            }
+            
+            count--;
+            unreadCount.textContent = count;
+          }
+        }, 250);
+      }
+    </script>
+  </body>
+</html>
